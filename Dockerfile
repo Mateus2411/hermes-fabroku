@@ -23,6 +23,9 @@ WORKDIR /app
 COPY . .
 RUN chmod +x /app/start.sh
 
+# Force port detection for Dokku
+ENV PORT=5000
+ENV DOKKU_DOCKERFILE_PORT=5000
 EXPOSE 5000
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
