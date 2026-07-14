@@ -1,15 +1,12 @@
 model:
-  default: deepseek/deepseek-chat
-  provider: openrouter
-  base_url: https://openrouter.ai/api/v1
+  default: big-pickle
+  provider: opencode-zen
+  base_url: https://opencode.ai/zen/v1
   context_length: 128000
 
 agent:
   max_turns: 50
   tool_use_enforcement: false
-
-terminal:
-  timeout: 60
 
 display:
   skin: default
